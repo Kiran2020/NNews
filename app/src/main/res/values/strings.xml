@@ -4,4 +4,5 @@
 
     <!-- Facebook app id for this application -->
     <string name="facebook_app_id">189914638025656</string>
+    <string name="title_activity_viewer">Viewer</string>
 </resources>

@@ -6,16 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.nnews.android.MainActivityFragment">
+    tools:context="com.nnews.android.ViewerFragment">
 
-    <Button
-        android:id="@+id/login_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"
-        android:textSize="25sp"
-        android:layout_centerInParent="true"
-        android:text="Log In with Facebook"/>
 
 </RelativeLayout>
