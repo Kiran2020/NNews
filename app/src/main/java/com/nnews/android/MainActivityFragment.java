@@ -6,7 +6,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
+import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
 /**
@@ -22,9 +26,29 @@ public class MainActivityFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView =  inflater.inflate(R.layout.fragment_main, container, false);
 
-        LoginButton loginButton = (LoginButton) rootView.findViewById(R.id.login_button);
+        // Facebook callback Manager
+        CallbackManager callbackManager = CallbackManager.Factory.create();
 
+        LoginButton loginButton = (LoginButton) rootView.findViewById(R.id.login_button);
         loginButton.setFragment(this);
+
+        // Callback registration
+        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+
+            }
+
+            @Override
+            public void onCancel() {
+
+            }
+
+            @Override
+            public void onError(FacebookException error) {
+
+            }
+        });
 
         return rootView;
     }
